@@ -1,0 +1,29 @@
+Generic 2nd Best Attività Didattica LPS - Gruppo 3
+
+  Fase 1.1: size_t
+
+  1. FALSA perché size_t era già presente nel C89
+  2. FALSA perché size_t può essere soltanto un tipo intero
+  3. FALSA perché size_t può essere un alias soltanto per i
+           tipi interi unsigned, come definito da C Standard
+  4. VERA  perché size_t può essere un alias soltanto per i
+           tipi interi unsigned, come definito da C Standard
+  5. FALSA perchè il risultato di sizeof( int ) può essere 
+           2 oppure 4
+  6. VERA  perchè può esistere un'implementazione in cui si
+           possano avere al massimo 2^n elementi all'interno
+		   dell'array (dimensione massima) e contemporaneamente
+		   puntatori ad indirizzi di n bit, anche se ciò nei 
+		   sistemi moderni renderebbe i puntatori molto limitati
+  7. VERA  perchè C Standard nelle sezioni 7.17 e 7.17.4 definisce
+           che size_t può essere un alias per il tipo unsigned 
+           short ed anche per unsigned long long, nel caso in cui
+           l'implementazione possa usare oggetti con dimensioni
+           così grandi
+  8. FALSA perchè size_t non può essere un alias per tipi 
+           interi signed
+  9. VERA  perchè, in casi particolari, size_t può essere un 
+           alias per dei puntatori unsigned *, anche se ciò è
+		   sconsigliato
+ 10. VERA  perchè non è possibile che size_t sia un alias per 
+           il tipo signed long 
